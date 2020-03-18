@@ -8,21 +8,21 @@ import java.util.Properties;
 
 public class DbPool {
     private static ComboPooledDataSource ds;
-
-    static {//创建连接池对象并设置属性
-        ds = new ComboPooledDataSource();
-        Properties properties = new Properties();
+    static {
+        ds=new ComboPooledDataSource();
+        Properties properties=new Properties();
         try {
             properties.load(DbPool.class.getClassLoader().getResourceAsStream("db.properties"));
             ds.setDriverClass(properties.getProperty("driverName"));
+            ds.setJdbcUrl(properties.getProperty("url"));
             ds.setUser(properties.getProperty("username"));
             ds.setPassword(properties.getProperty("password"));
-            ds.setJdbcUrl(properties.getProperty("Url"));
             ds.setInitialPoolSize(Integer.valueOf(properties.getProperty("InitialPoolSize")));
-            ds.setMaxPoolSize(Integer.valueOf(properties.getProperty("MaxPoolSize")));
             ds.setMinPoolSize(Integer.valueOf(properties.getProperty("MinPoolSize")));
+            ds.setMaxPoolSize(Integer.valueOf(properties.getProperty("MaxPoolSize")));
             ds.setMaxStatements(Integer.valueOf(properties.getProperty("MaxStatements")));
             ds.setMaxIdleTime(Integer.valueOf(properties.getProperty("MaxIdleTime")));
+
         } catch (Exception e) {
             e.printStackTrace();
         }

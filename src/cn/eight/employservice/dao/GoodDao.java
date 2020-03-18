@@ -1,21 +1,10 @@
 package cn.eight.employservice.dao;
 
-import cn.eight.employservice.pojo.CarBean;
-import cn.eight.employservice.pojo.Good;
-import cn.eight.employservice.util.DbPool;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
 public class GoodDao {
     private BasicDao basicDao = new BasicDao();
 
-    public List<String> queryGoodType() {
+
+    /*public List<String> queryGoodType() {
         String sql = "select DISTINCT goodtype from good order by goodtype";
         Connection con = DbPool.getConnection();
         PreparedStatement pst = null;
@@ -36,7 +25,7 @@ public class GoodDao {
         return null;
     }
 
-    public List<Good> queryGoodByType(String goodType) {
+    public List<Staff> queryGoodByType(String goodType) {
         String sql = "select * from good where goodtype=? order by id limit ?,?";
         Connection con = DbPool.getConnection();
         PreparedStatement pst = null;
@@ -44,9 +33,9 @@ public class GoodDao {
         try {
             pst = con.prepareStatement(sql);
             rs = basicDao.execQuery(con, pst, goodType,0,20);
-            List<Good> goodList = new ArrayList<>();
+            List<Staff> goodList = new ArrayList<>();
             while (rs != null && rs.next()) {
-                Good goodBean = new Good();
+                Staff goodBean = new Staff();
                 goodBean.setId(rs.getInt(1));
                 goodBean.setGoodname(rs.getString(2));
                 goodBean.setGoodtype(rs.getString(3));
@@ -63,8 +52,8 @@ public class GoodDao {
         return null;
     }
 
-    public List<Good> queryCarBean(CarBean carBean) {
-        List<Good> goodList = new ArrayList<>();
+    public List<Staff> queryCarBean(CarBean carBean) {
+        List<Staff> goodList = new ArrayList<>();
         Map<Integer, Integer> car = carBean.getCar();
         //从Map中取出所有的商品Id
         StringBuilder ids = new StringBuilder();
@@ -87,7 +76,7 @@ public class GoodDao {
             rs = basicDao.execQuery(con, pst, null);
            goodList = new ArrayList<>();
             while (rs != null && rs.next()) {
-                Good goodBean = new Good();
+                Staff goodBean = new Staff();
                 goodBean.setId(rs.getInt(1));
                 goodBean.setGoodname(rs.getString(2));
                 goodBean.setPrice(rs.getDouble(4));
@@ -102,5 +91,5 @@ public class GoodDao {
             basicDao.releaseResourse(rs, pst, con);
         }
         return null;
-    }
+    }*/
 }

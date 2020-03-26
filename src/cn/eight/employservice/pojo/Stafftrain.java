@@ -7,13 +7,39 @@ import java.util.Date;
  * @create 2020-03-17
  */
 public class Stafftrain {
+    private  int tid;
     private  int wid;
     private  String organization;
     private  String content;
     private  String status;
-    private  Date   time;
+    private  String   time;
 
     public Stafftrain() {
+    }
+
+    public Stafftrain(int tid, int wid, String organization, String content, String status, String time) {
+        this.tid = tid;
+        this.wid = wid;
+        this.organization = organization;
+        this.content = content;
+        this.status = status;
+        this.time = time;
+    }
+
+    public Stafftrain(int wid, String organization, String content, String status, String time) {
+        this.wid = wid;
+        this.organization = organization;
+        this.content = content;
+        this.status = status;
+        this.time = time;
+    }
+
+    public int getTid() {
+        return tid;
+    }
+
+    public void setTid(int tid) {
+        this.tid = tid;
     }
 
     public int getWid() {
@@ -48,19 +74,11 @@ public class Stafftrain {
         this.status = status;
     }
 
-    public Date getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(Date time) {
-        this.time = time;
-    }
-
-    public Stafftrain(int wid, String organization, String content, String status, Date time) {
-        this.wid = wid;
-        this.organization = organization;
-        this.content = content;
-        this.status = status;
+    public void setTime(String time) {
         this.time = time;
     }
 }

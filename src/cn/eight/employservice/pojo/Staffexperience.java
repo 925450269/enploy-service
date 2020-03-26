@@ -7,21 +7,39 @@ import java.util.Date;
  * @create 2020-03-17
  */
 public class Staffexperience {
+    private int eid;
     private int wid;
     private String workplace;
     private String type;
     private String duty;
-    private Date worktime;
+    private String worktime;
 
     public Staffexperience() {
     }
 
-    public Staffexperience(int wid, String workplace, String type, String duty, Date worktime) {
+    public Staffexperience(int wid, String workplace, String type, String duty, String worktime) {
         this.wid = wid;
         this.workplace = workplace;
         this.type = type;
         this.duty = duty;
         this.worktime = worktime;
+    }
+
+    public Staffexperience(int eid, int wid, String workplace, String type, String duty, String worktime) {
+        this.eid = eid;
+        this.wid = wid;
+        this.workplace = workplace;
+        this.type = type;
+        this.duty = duty;
+        this.worktime = worktime;
+    }
+
+    public int getEid() {
+        return eid;
+    }
+
+    public void setEid(int eid) {
+        this.eid = eid;
     }
 
     public int getWid() {
@@ -56,11 +74,11 @@ public class Staffexperience {
         this.duty = duty;
     }
 
-    public Date getWorktime() {
+    public String getWorktime() {
         return worktime;
     }
 
-    public void setWorktime(Date worktime) {
+    public void setWorktime(String worktime) {
         this.worktime = worktime;
     }
 }

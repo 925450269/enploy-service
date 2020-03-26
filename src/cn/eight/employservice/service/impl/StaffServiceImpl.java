@@ -52,5 +52,64 @@ public class StaffServiceImpl implements StaffService {
         return staffDao.Querystaffallinformation(wid);
     }
 
+    @Override
+    public boolean modstaffinformation(Staff staff) {
+        return staffDao.Updatestaffworker(staff);
+    }
+
+    @Override
+    public List<Integer> findstaffamilyfid(int wid) {
+        return staffDao.Querystaffamilyfid(wid);
+    }
+
+    @Override
+    public boolean modstaffamily(Staffamily staffamily) {
+        return staffDao.Updatestaffamily(staffamily);
+    }
+
+    @Override
+    public List<Integer> findstaffexperienceid(int wid) {
+        return staffDao.Querystaffexperienceid(wid);
+    }
+
+    @Override
+    public boolean modstaffexperience(Staffexperience staffexperience) {
+        return staffDao.Updatestaffexeprience(staffexperience);
+    }
+
+    @Override
+    public List<Integer> findstafftraintid(int wid) {
+        return staffDao.Querystaffatraintid(wid);
+    }
+
+    @Override
+    public boolean modstafftrain(Stafftrain stafftrain) {
+        return staffDao.Updatestafftrain(stafftrain);
+    }
+
+    @Override
+    public boolean addstaffworker(Staff staff) {
+        return staffDao.insertstaffworker(staff);
+    }
+
+    @Override
+    public boolean addstafffamily(Staffamily staffamily) {
+        return staffDao.insertstaffamily(staffamily);
+    }
+
+    @Override
+    public boolean addstaffexperience(Staffexperience staffexperience) {
+        return staffDao.insertstaffexeprience(staffexperience);
+    }
+
+    @Override
+    public boolean addstafftrain(Stafftrain stafftrain) {
+        return staffDao.insertstafftrain(stafftrain);
+    }
+
+    @Override
+    public boolean Verifywid(String wid) {
+        return staffDao.querStaffsamewid(wid);
+    }
 
 }

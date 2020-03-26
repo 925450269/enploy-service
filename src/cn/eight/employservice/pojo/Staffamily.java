@@ -2,12 +2,13 @@ package cn.eight.employservice.pojo;
 
 
 public class Staffamily {
-    private  int wid;
-    private  String relation;
-    private  String fname;
-    private  int fage;
-    private  String phone;
-    private  String workplace;
+    private int fid;
+    private int wid;
+    private String relation;
+    private String fname;
+    private int fage;
+    private String phone;
+    private String workplace;
 
     public Staffamily() {
     }
@@ -19,6 +20,22 @@ public class Staffamily {
         this.fage = fage;
         this.phone = phone;
         this.workplace = workplace;
+    }
+
+    public Staffamily(int fid, int wid, String relation, String fname, int fage, String phone, String workplace) {
+        this.fid = fid;
+        this.wid = wid;
+        this.relation = relation;
+        this.fname = fname;
+        this.fage = fage;
+        this.phone = phone;
+        this.workplace = workplace;
+    }
+
+    public int getFid() { return fid; }
+
+    public void setFid(int fid) {
+        this.fid = fid;
     }
 
     public int getWid() {

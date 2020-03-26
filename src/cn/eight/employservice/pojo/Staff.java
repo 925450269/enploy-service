@@ -9,13 +9,13 @@ public class Staff {
     private String wname;
     private String wsex;
     private String idcard;
-    private Date birth;
+    private String birth;
     private String wage;
     private int hige;
     private String cellphone;
     private String phone;
     private String type;
-    private Date worktime;
+    private String worktime;
     private String defect;
     private String photo;
     private String jhddress;
@@ -27,20 +27,20 @@ public class Staff {
     private String hystatus;
     private String zjstatus;
     private String tjstatus;
-    private Date tjtime;
+    private String tjtime;
     private String grskills;
     private String jieshao;
-    private Date timerequire;
+    private String timerequire;
     private String salaryrequire;
     private String live;
     private String eat;
-    private Date starttime;
+    private String starttime;
     private String companyid;
 
     public Staff() {
     }
 
-    public Staff(String wid, String wname, String wsex, String wage, String status, String grskills, String salaryrequire, Date starttime, String companyid) {
+    public Staff(String wid, String wname, String wsex, String wage, String status, String grskills, String salaryrequire, String starttime, String companyid) {
         this.wid = wid;
         this.wname = wname;
         this.wsex = wsex;
@@ -52,7 +52,73 @@ public class Staff {
         this.companyid = companyid;
     }
 
-    public Staff(String wid, int cid, String wname, String wsex, String idcard, Date birth, String wage, int hige, String cellphone, String phone, String type, Date worktime, String defect, String photo, String jhddress, String address, String card, String bxnumber, String language, String status, String hystatus, String zjstatus, String tjstatus, Date tjtime, String grskills, String jieshao, Date timerequire, String salaryrequire, String live, String eat, Date starttime, String companyid) {
+    public Staff(String wid, String wname, String wsex, String idcard, String birth, String wage, int hige, String cellphone, String phone, String type, String worktime, String defect, String jhddress, String address, String card, String bxnumber, String language, String status, String hystatus, String zjstatus, String tjstatus, String tjtime, String grskills, String jieshao, String timerequire, String salaryrequire, String live, String eat, String companyid) {
+        this.wid = wid;
+        this.wname = wname;
+        this.wsex = wsex;
+        this.idcard = idcard;
+        this.birth = birth;
+        this.wage = wage;
+        this.hige = hige;
+        this.cellphone = cellphone;
+        this.phone = phone;
+        this.type = type;
+        this.worktime = worktime;
+        this.defect = defect;
+        this.jhddress = jhddress;
+        this.address = address;
+        this.card = card;
+        this.bxnumber = bxnumber;
+        this.language = language;
+        this.status = status;
+        this.hystatus = hystatus;
+        this.zjstatus = zjstatus;
+        this.tjstatus = tjstatus;
+        this.tjtime = tjtime;
+        this.grskills = grskills;
+        this.jieshao = jieshao;
+        this.timerequire = timerequire;
+        this.salaryrequire = salaryrequire;
+        this.live = live;
+        this.eat = eat;
+        this.companyid = companyid;
+    }
+
+
+    public Staff(String wid,int cid, String wname, String wsex, String idcard, String birth, String wage, int hige, String cellphone, String phone, String type, String worktime, String defect, String jhddress, String address, String card, String bxnumber, String language, String status, String hystatus, String zjstatus, String tjstatus, String tjtime, String grskills, String jieshao, String timerequire, String salaryrequire, String live, String eat, String companyid) {
+        this.wid = wid;
+        this.cid = cid;
+        this.wname = wname;
+        this.wsex = wsex;
+        this.idcard = idcard;
+        this.birth = birth;
+        this.wage = wage;
+        this.hige = hige;
+        this.cellphone = cellphone;
+        this.phone = phone;
+        this.type = type;
+        this.worktime = worktime;
+        this.defect = defect;
+        this.jhddress = jhddress;
+        this.address = address;
+        this.card = card;
+        this.bxnumber = bxnumber;
+        this.language = language;
+        this.status = status;
+        this.hystatus = hystatus;
+        this.zjstatus = zjstatus;
+        this.tjstatus = tjstatus;
+        this.tjtime = tjtime;
+        this.grskills = grskills;
+        this.jieshao = jieshao;
+        this.timerequire = timerequire;
+        this.salaryrequire = salaryrequire;
+        this.live = live;
+        this.eat = eat;
+        this.companyid = companyid;
+    }
+
+    public Staff(String wid, int cid, String wname, String wsex, String idcard, String birth, String wage, int hige, String cellphone, String phone, String type, String worktime, String defect, String photo, String jhddress, String address, String card, String bxnumber, String language, String status, String hystatus, String zjstatus, String tjstatus, String tjtime, String grskills, String jieshao, String timerequire, String salaryrequire, String live, String eat, String starttime, String companyid) {
         this.wid = wid;
         this.cid = cid;
         this.wname = wname;
@@ -127,11 +193,11 @@ public class Staff {
         this.idcard = idcard;
     }
 
-    public Date getBirth() {
+    public String getBirth() {
         return birth;
     }
 
-    public void setBirth(Date birth) {
+    public void setBirth(String birth) {
         this.birth = birth;
     }
 
@@ -175,11 +241,11 @@ public class Staff {
         this.type = type;
     }
 
-    public Date getWorktime() {
+    public String getWorktime() {
         return worktime;
     }
 
-    public void setWorktime(Date worktime) {
+    public void setWorktime(String worktime) {
         this.worktime = worktime;
     }
 
@@ -271,11 +337,11 @@ public class Staff {
         this.tjstatus = tjstatus;
     }
 
-    public Date getTjtime() {
+    public String getTjtime() {
         return tjtime;
     }
 
-    public void setTjtime(Date tjtime) {
+    public void setTjtime(String tjtime) {
         this.tjtime = tjtime;
     }
 
@@ -295,11 +361,11 @@ public class Staff {
         this.jieshao = jieshao;
     }
 
-    public Date getTimerequire() {
+    public String getTimerequire() {
         return timerequire;
     }
 
-    public void setTimerequire(Date timerequire) {
+    public void setTimerequire(String timerequire) {
         this.timerequire = timerequire;
     }
 
@@ -327,11 +393,11 @@ public class Staff {
         this.eat = eat;
     }
 
-    public Date getStarttime() {
+    public String getStarttime() {
         return starttime;
     }
 
-    public void setStarttime(Date starttime) {
+    public void setStarttime(String starttime) {
         this.starttime = starttime;
     }
 
